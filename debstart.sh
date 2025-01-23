@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "
 deb http://deb.debian.org/debian/ bookworm main non-free-firmware contrib non-free
 deb-src http://deb.debian.org/debian/ bookworm main non-free-firmware contrib non-free
@@ -27,7 +29,7 @@ alias su='su -'
 alias susu='sudo su -'
 alias ts='journalctl -f |ccze -CA'" >>/etc/bash.bashrc
 
-echo 'PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "' >> /etc/profile
+echo "PS1=\"\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\\$ \"" >> /etc/profile
 
 sed -i 's/#force_color_prompt=yes/force_color_prompt=yes/' /home/operador/.bashrc
 
