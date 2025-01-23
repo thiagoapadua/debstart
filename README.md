@@ -5,5 +5,3 @@ chmod +x debstart.sh
 ./debstart.sh  
 
 pronto, seu debian está bem melhor e pronto para utilizar.  
-
-teste
