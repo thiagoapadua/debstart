@@ -12,7 +12,7 @@ deb http://deb.debian.org/debian/ bookworm-updates main non-free-firmware contri
 deb-src http://deb.debian.org/debian/ bookworm-updates main non-free-firmware contrib non-free" > /etc/apt/sources.list
 
 apt update
-apt -y install vim wget net-tools tcpdump ccze ssh ntpdate sudo lsb-release gnupg systemd-timesyncd
+apt -y install vim wget net-tools tcpdump ccze ssh ntpdate sudo lsb-release gnupg systemd-timesyncd man
 
 gpasswd -a operador sudo
 
