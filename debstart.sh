@@ -4,15 +4,15 @@ SSHPORT="1414"
 SSHUSER="operador thiago"
 
 echo "
-deb http://deb.debian.org/debian/ bookworm main non-free-firmware contrib non-free
-deb-src http://deb.debian.org/debian/ bookworm main non-free-firmware contrib non-free
-deb http://security.debian.org/debian-security bookworm-security main non-free-firmware
-deb-src http://security.debian.org/debian-security bookworm-security main non-free-firmware
-deb http://deb.debian.org/debian/ bookworm-updates main non-free-firmware contrib non-free
-deb-src http://deb.debian.org/debian/ bookworm-updates main non-free-firmware contrib non-free" > /etc/apt/sources.list
+deb http://deb.debian.org/debian/ trixie main non-free-firmware contrib non-free
+deb-src http://deb.debian.org/debian/ trixie main non-free-firmware contrib non-free
+deb http://security.debian.org/debian-security trixie-security main non-free-firmware
+deb-src http://security.debian.org/debian-security trixie-security main non-free-firmware
+deb http://deb.debian.org/debian/ trixie-updates main non-free-firmware contrib non-free
+deb-src http://deb.debian.org/debian/ trixie-updates main non-free-firmware contrib non-free" > /etc/apt/sources.list
 
 apt update
-apt -y install vim wget net-tools tcpdump ccze ssh ntpdate sudo lsb-release gnupg systemd-timesyncd man
+apt -y install vim wget net-tools tcpdump ccze ssh sudo lsb-release gnupg systemd-timesyncd man
 
 gpasswd -a operador sudo
 
@@ -36,7 +36,7 @@ echo "PS1='\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:
 
 sed -i 's/#force_color_prompt=yes/force_color_prompt=yes/' /home/operador/.bashrc
 
-sed -i 's/mouse=a/mouse-=a/' /usr/share/vim/vim90/defaults.vim
+sed -i 's/mouse=a/mouse-=a/' /usr/share/vim/vim91/defaults.vim
 
 sed -i 's/"set background=dark/set background=dark/' /etc/vim/vimrc
 
